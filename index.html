@@ -11,58 +11,60 @@
 
 <body>
     <div id="kwentahanan">
-        <div class="flex justify-center item-center p-5 mt-10 lg:block sm:hidden md:hidden block">
-            <div
-                class="w-full h-fit rounded-[10%] shadow-xl p-10  cursor-pointer bg-rose-700 border-5 border-black  shadow-4xl shadow-rose-950">
-                <div class="">
-                    <input v-model="typingboard" type="text" placeholder="0"
-                        class="bg-gray-200 w-full  h-15 rounded-2xl border border-white font-bold  text-2xl cursor-pointer p-5 text-right text-red-700">
-                </div>
-                <div class="flex justify-between w-full  items-center gap-5 ">
-                    <div>
-                        <button @click="cancel('ac')"
-                            class="bg-gray-300 w-30 h-15 rounded-2xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500 ">AC</button>
+        <div class="flex justify-center p-5 mt-10 bg-gray-200 lg:block sm:hidden md:hidden block">
+            <div class="flex justify-center">
+                <div
+                    class="w-full h-fit rounded-[10%] shadow-xl lg:w-fit p-10  cursor-pointer bg-rose-700 border-5 border-black  shadow-4xl shadow-rose-950">
+                    <div class="">
+                        <input v-model="typingboard" type="text" placeholder="0"
+                            class="bg-gray-200 w-full  h-15 lg:w-fit lg:h-18 rounded-2xl border border-white font-bold  text-2xl cursor-pointer p-5 text-right text-red-700">
                     </div>
-                    <button @click="numbersOperator('%')"
-                        class="bg-gray-300 w-20 h-15 rounded-2xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500 ">%</button>
-                    <button @click="numbersOperator('/')"
-                        class=" w-20 h-15 rounded-2xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer  hover:bg-gray-300">/</button>
-                </div>
-                <div class="flex gap-5">
-                    <button @click="numbers('7')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">7</button>
-                    <button @click="numbers('8')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">8</button>
-                    <button @click="numbers('9')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">9</button>
-                    <button @click="numbersOperator('*')"
-                        class="w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer  hover:bg-gray-300 font-bold">*</button>
-                </div>
-                <div class="flex gap-5">
-                    <button @click="numbers('4')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">4</button>
-                    <button @click="numbers('5')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">5</button>
-                    <button @click="numbers('6')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">6</button>
-                    <button @click="numbersOperator('+')"
-                        class="w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer  hover:bg-gray-300 font-bold">+</button>
-                </div>
-                <div class="flex gap-5">
-                    <button @click="numbers('1')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">1</button>
-                    <button @click="numbers('2')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">2</button>
-                    <button @click="numbers('3')"
-                        class="bg-gray-300 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">3</button>
-                    <button @click="numbersOperator('-')"
-                        class=" w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer hover:bg-gray-300 font-bold">-</button>
-                </div>
-                <div class="flex gap-5">
-                    <button @click="numbers('0')"
-                        class="bg-gray-300 w-50 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-green-300">0</button>
-                    <button @click="equalOperator('=')"
-                        class="w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer hover:bg-mauve-500 font-bold">=</button>
+                    <div class="flex justify-between w-full lg:w-fit  items-center gap-5 ">
+                        <div>
+                            <button @click="cancel('ac')"
+                                class="bg-gray-300 w-30 h-15 lg:w-40 lg:h-18 rounded-2xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500 ">AC</button>
+                        </div>
+                        <button @click="numbersOperator('%')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-2xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500 ">%</button>
+                        <button @click="numbersOperator('/')"
+                            class=" w-20 h-15 lg:w-20 lg:h-18 rounded-2xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer  hover:bg-gray-300">/</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <button @click="numbers('7')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">7</button>
+                        <button @click="numbers('8')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">8</button>
+                        <button @click="numbers('9')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">9</button>
+                        <button @click="numbersOperator('*')"
+                            class="w-20 h-15 lg:w-20 lg:h-18 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer  hover:bg-gray-300 font-bold">*</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <button @click="numbers('4')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">4</button>
+                        <button @click="numbers('5')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">5</button>
+                        <button @click="numbers('6')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">6</button>
+                        <button @click="numbersOperator('+')"
+                            class="w-20 h-15 lg:w-20 lg:h-18 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer  hover:bg-gray-300 font-bold">+</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <button @click="numbers('1')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">1</button>
+                        <button @click="numbers('2')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">2</button>
+                        <button @click="numbers('3')"
+                            class="bg-gray-300 lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-gray-500">3</button>
+                        <button @click="numbersOperator('-')"
+                            class="lg:w-20 lg:h-18 w-20 h-15 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer hover:bg-gray-300 font-bold">-</button>
+                    </div>
+                    <div class="flex gap-5">
+                        <button @click="numbers('0')"
+                            class="bg-gray-300 w-50 h-15 lg:w-60 lg:h-18 rounded-xl border border-white mt-5 text-2xl text-black cursor-pointer hover:bg-green-300">0</button>
+                        <button @click="equalOperator('=')"
+                            class="w-20 h-15 lg:w-30 lg:h-18 rounded-xl border border-white mt-5 text-2xl text-black bg-gray-50 cursor-pointer hover:bg-mauve-500 font-bold">=</button>
+                    </div>
                 </div>
             </div>
         </div>
